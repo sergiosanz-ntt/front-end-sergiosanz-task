@@ -12,6 +12,10 @@ import static org.openqa.selenium.support.PageFactory.initElements;
 
 public class OdsHomePage extends FrontEndOperation {
 
+    public void sayHello() {
+        System.out.println("-> Say hello <-");
+    }
+
     public OdsHomePage() {
         WebDriver driver = DriverConfiguration.getDriver();
         initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(Constants.LOW_TIMEOUT)), this);

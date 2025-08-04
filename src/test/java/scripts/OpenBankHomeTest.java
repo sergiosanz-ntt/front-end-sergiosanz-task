@@ -8,7 +8,6 @@ public class OpenBankHomeTest extends GenericTest<OdsHomePage> {
 
     @Test
     public void test() {
-        System.out.println("Hello");
-//        controller.sayHello();
+        controller.sayHello();
     }
 }
