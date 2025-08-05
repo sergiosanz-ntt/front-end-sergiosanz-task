@@ -4,15 +4,15 @@ import com.aventstack.extentreports.ExtentReports;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import utilities.*;
-import utils.TestErrorHandler;
+import utils.TestHandler;
 
 import java.lang.reflect.ParameterizedType;
 
 import static org.nttdata.helpers.Runners.runAllureReport;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-@ExtendWith(TestErrorHandler.class)
-public class GenericTest<T> {
+@ExtendWith(TestHandler.class)
+public class TestBase<T> {
 
     protected T controller;
     protected static ExtentReports extent;
