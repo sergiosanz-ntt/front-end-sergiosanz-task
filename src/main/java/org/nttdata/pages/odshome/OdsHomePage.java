@@ -69,7 +69,7 @@ public class OdsHomePage extends FrontEndOperation {
         return checkLinks;
     }
 
-    public boolean isHazteClienteVisible() {
+    public boolean isHazteClienteBtnVisible() {
         try {
             boolean check = hazteClienteButton.isDisplayed();
             ExtentReport.addMessage(Status.INFO, "Hazte cliente button should be displayed: " + check);
@@ -80,7 +80,7 @@ public class OdsHomePage extends FrontEndOperation {
         }
     }
 
-    public boolean isAreaClientesVisible() {
+    public boolean isAreaClientesBtnVisible() {
         try {
             boolean check = areaClientesButton.isDisplayed();
             ExtentReport.addMessage(Status.INFO, "Area Clientes Button should be displayed: " + check);
