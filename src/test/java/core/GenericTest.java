@@ -3,7 +3,6 @@ package core;
 import com.aventstack.extentreports.ExtentReports;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.openqa.selenium.WebDriver;
 import utilities.*;
 import utils.TestErrorHandler;
 
@@ -55,13 +54,8 @@ public class GenericTest<T> {
     public void tearDown() {
 //        Accessibility.checkAccessibility();
         NetworkLogs.getNetworkLogs();
-        try {
-            WebDriver driver = DriverConfiguration.getDriver();
-            if (driver != null) {
-                driver.quit();
-            }
-        } catch (Exception e) {
-            System.out.println("Driver termination skipped (probably already closed).");
+        if (DriverConfiguration.getDriver() != null) {
+            DriverConfiguration.quitDriver();
         }
     }
 }
