@@ -1,4 +1,4 @@
-# Automation Front End - Landing Page Test Cases
+# Automation Front End - OpenBank Test Cases
 
 #### 🧑‍💻 Technologies Used
 
