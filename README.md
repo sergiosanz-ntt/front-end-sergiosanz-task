@@ -5,6 +5,7 @@
 - Java 21 
 - Maven
 - JUnit
+- Cucumber | Gherkin BDD
 
 ## 🧪 Running Tests
 
@@ -12,7 +13,10 @@
 
 2. Create a JUnit run configuration in IntelliJ
 
-3. Then, select the test class you want to run: `OpenBankHomeTest`
+3. Then, select the test class you want to run:   
+
+* **JUnit**: `OpenBankHomeTest`
+* **Cucumber**: `CucumberRunner` (runs `openbank.feature`)
 
 4. Finally, select the environment variables you want to use: 
 
@@ -40,14 +44,21 @@ front-end-sergiosanz-task/
 │    │   │                   └───OdsHomePage
 │    │   └───resources
 │    └───test
-│        └───java
-│            ├───core
-│            │    └───TestBase
-│            ├───scripts
-│            │    └───OpenBankHomeTest
-│            └───utils
-│                 └───TestHandler
-│
+│        ├───java
+│        │   ├───core
+│        │   │    └───CucumberTestBase
+│        │   │    └───TestBase
+│        │   ├───runner
+│        │   │    └───CucumberRunner
+│        │   ├───scripts
+│        │   │    └───OpenBankHomeTest
+│        │   ├───stepdef
+│        │   │    └───OpenBankSteps
+│        │   └───utils
+│        │        └───TestHandler
+│        └───resources
+│             └───features
+│                  └───openbank.feature
 ├───example-report.html
 ├───pom.xml
 └───README.md
@@ -58,3 +69,4 @@ front-end-sergiosanz-task/
 After the test run, the following report is generated:
 
 * **Extent Report**: `report.html`
+* **Cucumber Report**: `cucumber-report.html`
